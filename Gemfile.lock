@@ -1,0 +1,28 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    basica (0.0.1)
+    cuba (3.3.0)
+      rack
+    daemons (1.1.9)
+    eventmachine (1.0.3)
+    hiredis (0.5.2)
+    rack (1.5.2)
+    redic (1.1.1)
+      hiredis
+    shotgun (0.9)
+      rack (>= 1.0)
+    thin (1.6.2)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  basica
+  cuba
+  redic
+  shotgun
+  thin
