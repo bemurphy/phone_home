@@ -42,7 +42,9 @@ Cuba.define do
   end
 
   authenticated =  basic_auth(env) do |_, pass|
-    Rack::Utils.secure_compare(pass.to_s, ENV.fetch('PASSWORD'))
+    given    = Digest::MD5.hexdigest(pass.to_s)
+    expected = Digest::MD5.hexdigest(ENV.fetch('PASSWORD'))
+    Rack::Utils.secure_compare(given, expected)
   end
 
   on authenticated, "track" do
