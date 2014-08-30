@@ -24,10 +24,7 @@ Keeping your IP up to date, in a crontab:
 */30 * * * * curl -X POST https://:password@app.herokuapp.com/track/home > /dev/null 2>&1
 ```
 
-Connecting remotely:
+Getting the ip:
 ```shell
-#!/bin/sh
-
-IP=`curl -s https://:password@app.herokuapp.com/track/home`
-exec ssh $IP
+curl -s https://:password@app.herokuapp.com/track/home
 ```
