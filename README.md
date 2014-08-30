@@ -14,3 +14,4 @@ Endpoints
 * GET "/track" - Show a JSON hash of all locations
 * GET "/track/:location" - return the ip for a registered location
 * POST "/track/:location" - store the remote addr ip for a location
+* DELETE "/track/:location" - remove the location
